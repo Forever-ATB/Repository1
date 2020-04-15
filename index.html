@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<!-- Meta
+	============================================= -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="IT Geeks">
+    <!-- description -->
+    <meta name="description" content="">
+    <!-- keywords -->
+    <meta name="keywords" content="">
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="css/css-assets.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Favicon
+	============================================= -->
+	<link rel="shortcut icon" href="images/general-elements/favicon/favicon.png">
+	<link rel="apple-touch-icon" href="images/general-elements/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/general-elements/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/general-elements/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Title
+	============================================= -->
+	<title>主页</title>
+
+</head>
+
+<body class="homepage">
+
+	<!-- Website Loading
+	============================================= -->
+	<div id="website-loading">
+		<a class="logo logo-loader" href="index.html">
+			<img src="images/files/logo-header.png" alt="">
+			<h3><span class="colored">IT Geeks</span></h3>
+			<span>Web Services</span>
+		</a><!-- .logo end -->
+		<div class="loader">
+			<div class="la-ball-pulse la-2x">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div><!-- .loader end -->
+	</div><!-- .website-loading end -->
+
+	<!-- Document Full Container
+	============================================= -->
+	<div id="full-container">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+
+			<div id="header-bar-1" class="header-bar">
+
+				<div class="header-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="hb-content">
+									<div class="position-left">
+										<ul class="list-info">
+											
+										</ul><!-- .list-info end -->
+									</div><!-- .position-left end -->
+									<div class="position-right">
+										<ul class="list-info">
+											<li><a class="popup-btn-login" href="javascript:;">登录</a></li>
+											<li><a class="popup-btn-register" href="javascript:;">注册</a></li>
+										</ul><!-- .list-info end -->
+									</div><!-- .position-right end -->
+								</div><!-- .hb-content end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .header-bar-wrap -->
+
+			</div><!-- #header-bar-1 end -->
+
+			<div id="header-bar-2" class="header-bar sticky">
+
+				<div class="header-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="hb-content">
+									<a class="logo logo-header" href="index.html">
+										<img src="images/files/logo-header.png" data-logo-alt="images/files/logo-header-alt.png" alt="">
+										<h3><span class="colored">IT Geeks</span></h3>
+										<span>Web Services</span>
+									</a><!-- .logo end -->
+									<ul id="menu-main" class="menu-main">
+										<li><a href="javascript:;" class="current">首页</a></li>
+										<li><a href="javascript:;">航班</a></li>
+										<li><a href="javascript:;">订单</a></li>
+										<li><a href="javascript:;">个人信息</a></li>
+										<li>
+											<a href="javascript:;">所有页面</a>
+											<ul class="sub-menu">
+												<li><a href="search.html">航班查询</a></li>
+												<li><a href="login.html">用户登录</a></li>
+												<li><a href="register.html">用户注册</a></li>
+												<li><a href="blog-single.html">订单管理</a></li>
+												<li><a href="destination-single.html">我的个人信息</a></li>
+											</ul><!-- .sub-menu end -->
+										</li>
+									</ul><!-- #menu-main end -->
+									<div class="menu-mobile-btn">
+										<div class="hamburger hamburger--slider">
+											<span class="hamburger-box">
+												<span class="hamburger-inner"></span>
+											</span>
+										</div>
+									</div><!-- .menu-mobile-btn end -->
+								</div><!-- .hb-content end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .header-bar-wrap -->
+
+			</div><!-- #header-bar-2 end -->
+
+		</header><!-- #header end -->
+
+		<!-- Banner
+		============================================= -->
+		<section id="banner">
+
+			<div class="banner-parallax" data-banner-height="550">
+				<img src="images/files/parallax-bg/img-4.jpg" alt="">
+				<div class="overlay-colored color-bg-white opacity-40"></div><!-- .overlay-colored end -->
+				<div class="slide-content">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+				
+								<div class="banner-center-box">
+									<h1 class="font-heading-secondary">
+										欢迎使用<strong> 飞机订票系统</strong>
+										<br>
+									</h1>
+									<h4>请输入你要查询的航班信息</h4>
+									<div class="banner-reservation-tabs">
+										<ul class="br-tabs">
+											<li class="active"><a href="javascript:;">往返</a></li>
+											<li><a href="javascript:;">单程</a></li>
+											<li><a href="javascript:;">多目的地</a></li>
+										</ul><!-- .br-tabs end -->
+										<ul class="br-tabs-content">
+											<li class="active">
+												<form class="form-banner-reservation form-inline style-2 form-h-50">
+													<div class="form-group">
+														<input type="text" name="brPlaceStart" class="form-control" placeholder="From">
+														<i class="fas fa-plane"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brPlaceEnd" class="form-control" placeholder="To">
+														<i class="fas fa-plane"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brTimeStart" class="form-control" id="datepicker-time-start"
+															placeholder="2019/09/30">
+														<i class="far fa-calendar"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brTimeEnd" class="form-control" id="datepicker-time-end"
+															placeholder="2019/09/30">
+														<i class="far fa-calendar"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brPassengerNumber" class="form-control show-dropdown-passengers"
+															placeholder="Passengers">
+														<i class="fas fa-user"></i>
+														<ul class="list-dropdown-passengers">
+															<li>
+																<ul class="list-persons-count">
+																	<li>
+																		<span>Adults:</span>
+																		<div class="counter-add-item">
+																			<a class="decrease-btn" href="javascript:;">-</a>
+																			<input type="text" value="1">
+																			<a class="increase-btn" href="javascript:;">+</a>
+																		</div><!-- .counter-add-item end -->
+																	</li>
+																	<li>
+																		<span>Childs:</span>
+																		<div class="counter-add-item">
+																			<a class="decrease-btn" href="javascript:;">-</a>
+																			<input type="text" value="0">
+																			<a class="increase-btn" href="javascript:;">+</a>
+																		</div><!-- .counter-add-item end -->
+																	</li>
+																</ul><!-- .list-persons-count end -->
+															</li>
+															<li>
+																<ul class="list-select-grade">
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			Economy Class
+																		</label>
+																	</li>
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			Business Class
+																		</label>
+																	</li>
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			First Class
+																		</label>
+																	</li>
+																</ul><!-- .list-select-grade end -->
+															</li>
+															<li>
+																<ul class="list-reservation-options">
+																	<li>
+																		<label class="label-container checkbox-default">
+																			<span>
+																				Nonstop
+																			</span>
+																			<input type="checkbox">
+																			<span class="checkmark"></span>
+																		</label>
+																	</li>
+																	<li>
+																		<label class="label-container checkbox-default">
+																			<span>
+																				Refundable
+																			</span>
+																			<input type="checkbox">
+																			<span class="checkmark"></span>
+																		</label>
+																	</li>
+																</ul><!-- .list-reservation-options end -->
+															</li>
+															<li>
+																<a class="btn-reservation-passengers btn x-small colorful hover-dark"
+																	href="javascript:;">Done</a>
+															</li>
+														</ul><!-- .list-dropdown-passengers end -->
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<button type="submit" class="form-control icon"><i class="fas fa-search"></i></button>
+													</div><!-- .form-group end -->
+												</form><!-- .form-banner-reservation end -->
+											</li>
+											<li>
+												<form class="form-banner-reservation form-inline style-2 form-h-50">
+													<div class="form-group">
+														<input type="text" name="brPlaceStart" class="form-control" placeholder="From">
+														<i class="fas fa-plane"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brPlaceEnd" class="form-control" placeholder="To">
+														<i class="fas fa-plane"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brTimeStart" class="form-control datepicker-2-time-start"
+															placeholder="2019/09/30">
+														<i class="far fa-calendar"></i>
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<input type="text" name="brPassengerNumber" class="form-control show-dropdown-passengers"
+															placeholder="Passengers">
+														<i class="fas fa-user"></i>
+														<ul class="list-dropdown-passengers">
+															<li>
+																<ul class="list-persons-count">
+																	<li>
+																		<span>Adults:</span>
+																		<div class="counter-add-item">
+																			<a class="decrease-btn" href="javascript:;">-</a>
+																			<input type="text" value="1">
+																			<a class="increase-btn" href="javascript:;">+</a>
+																		</div><!-- .counter-add-item end -->
+																	</li>
+																	<li>
+																		<span>Childs:</span>
+																		<div class="counter-add-item">
+																			<a class="decrease-btn" href="javascript:;">-</a>
+																			<input type="text" value="0">
+																			<a class="increase-btn" href="javascript:;">+</a>
+																		</div><!-- .counter-add-item end -->
+																	</li>
+																</ul><!-- .list-persons-count end -->
+															</li>
+															<li>
+																<ul class="list-select-grade">
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			Economy Class
+																		</label>
+																	</li>
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			Business Class
+																		</label>
+																	</li>
+																	<li>
+																		<label class="radio-container radio-default">
+																			<input type="radio" checked="checked" name="radio">
+																			<span class="checkmark"></span>
+																			First Class
+																		</label>
+																	</li>
+																</ul><!-- .list-select-grade end -->
+															</li>
+															<li>
+																<ul class="list-reservation-options">
+																	<li>
+																		<label class="label-container checkbox-default">
+																			<span>
+																				Nonstop
+																			</span>
+																			<input type="checkbox">
+																			<span class="checkmark"></span>
+																		</label>
+																	</li>
+																	<li>
+																		<label class="label-container checkbox-default">
+																			<span>
+																				Refundable
+																			</span>
+																			<input type="checkbox">
+																			<span class="checkmark"></span>
+																		</label>
+																	</li>
+																</ul><!-- .list-reservation-options end -->
+															</li>
+															<li>
+																<a class="btn-reservation-passengers btn x-small colorful hover-dark"
+																	href="javascript:;">Done</a>
+															</li>
+														</ul><!-- .list-dropdown-passengers end -->
+													</div><!-- .form-group end -->
+													<div class="form-group">
+														<button type="submit" class="form-control icon"><i class="fas fa-search"></i></button>
+													</div><!-- .form-group end -->
+												</form><!-- .form-banner-reservation end -->
+											</li>
+											<li>
+												<div class="multiple-destinations">
+													<form class="form-banner-reservation form-inline style-2 form-h-50">
+														<div class="form-group">
+															<div class="fields-row fields-4">
+																<div class="box-field">
+																	<input type="text" name="brPlaceStart" class="form-control" placeholder="From">
+																	<i class="fas fa-plane rotate-90-pos"></i>
+																</div><!-- .box-field end -->
+																<div class="box-field">
+																	<input type="text" name="brPlaceEnd" class="form-control" placeholder="To">
+																	<i class="fas fa-plane rotate-90-neg"></i>
+																</div><!-- .box-field end -->
+																<div class="box-field">
+																	<input type="text" name="brTimeStart" class="form-control datepicker-2-time-start"
+																		placeholder="2019/09/30">
+																	<i class="far fa-calendar"></i>
+																</div><!-- .box-field end -->
+																<div class="box-field">
+																	<input type="text" name="brPassengerNumber"
+																		class="form-control show-dropdown-passengers" placeholder="Passengers">
+																	<i class="fas fa-user"></i>
+																	<ul class="list-dropdown-passengers">
+																		<li>
+																			<ul class="list-persons-count">
+																				<li>
+																					<span>Adults:</span>
+																					<div class="counter-add-item">
+																						<a class="decrease-btn" href="javascript:;">-</a>
+																						<input type="text" value="1">
+																						<a class="increase-btn" href="javascript:;">+</a>
+																					</div><!-- .counter-add-item end -->
+																				</li>
+																				<li>
+																					<span>Childs:</span>
+																					<div class="counter-add-item">
+																						<a class="decrease-btn" href="javascript:;">-</a>
+																						<input type="text" value="0">
+																						<a class="increase-btn" href="javascript:;">+</a>
+																					</div><!-- .counter-add-item end -->
+																				</li>
+																			</ul><!-- .list-persons-count end -->
+																		</li>
+																		<li>
+																			<ul class="list-select-grade">
+																				<li>
+																					<label class="radio-container radio-default">
+																						<input type="radio" checked="checked" name="radio">
+																						<span class="checkmark"></span>
+																						Economy Class
+																					</label>
+																				</li>
+																				<li>
+																					<label class="radio-container radio-default">
+																						<input type="radio" checked="checked" name="radio">
+																						<span class="checkmark"></span>
+																						Business Class
+																					</label>
+																				</li>
+																				<li>
+																					<label class="radio-container radio-default">
+																						<input type="radio" checked="checked" name="radio">
+																						<span class="checkmark"></span>
+																						First Class
+																					</label>
+																				</li>
+																			</ul><!-- .list-select-grade end -->
+																		</li>
+																		<li>
+																			<ul class="list-reservation-options">
+																				<li>
+																					<label class="label-container checkbox-default">
+																						<span>
+																							Nonstop
+																						</span>
+																						<input type="checkbox">
+																						<span class="checkmark"></span>
+																					</label>
+																				</li>
+																				<li>
+																					<label class="label-container checkbox-default">
+																						<span>
+																							Refundable
+																						</span>
+																						<input type="checkbox">
+																						<span class="checkmark"></span>
+																					</label>
+																				</li>
+																			</ul><!-- .list-reservation-options end -->
+																		</li>
+																		<li>
+																			<a class="btn-reservation-passengers btn x-small colorful hover-dark"
+																				href="javascript:;">Done</a>
+																		</li>
+																	</ul><!-- .list-dropdown-passengers end -->
+																</div><!-- .box-field end -->
+															</div><!-- .fields-row end -->
+														</div><!-- .form-group end -->
+														<div class="form-group">
+															<button type="submit" class="form-control icon"><i class="fas fa-search"></i></button>
+														</div><!-- .form-group end -->
+													</form><!-- .form-banner-reservation end -->
+													<a class="btn-multiple-destinations btn x-small colorful hover-dark" href="javascript:;">
+														<i class="fas fa-plus"></i>
+														添加航班
+													</a>
+												</div><!-- .multiple-destinations end -->
+											</li>
+										</ul><!-- .br-tabs-content end -->
+									</div><!-- .banner-reservation-tabs end -->
+								</div><!-- .banner-center-box end -->
+				
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+				</div><!-- .slide-content end -->
+			</div><!-- .banner-parallax end -->
+
+		</section><!-- #banner end -->
+
+		
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer">
+
+			<div id="footer-bar-1" class="footer-bar">
+
+				<div class="footer-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="fb-row">
+
+									<div class="row">
+										<div class="col-md-3 mt-md-50">
+										
+										</div>
+										<div class="col-md-3 mt-md-50">
+
+											<img class="mb-30 logo-footer" src="images/files/logo-header.png" alt="">
+										</div>
+										<!-- .col-md-3 end -->
+										<div class="col-md-3 mt-md-50">
+											<h4>
+												Contact Us
+											</h4>
+											<ul class="list-contact-info">
+												<li>
+													<i class="fas fa-map-marker-alt"></i>
+													<div class="info-content">
+														<span>南昌航空大学 27栋 614 房间</span>
+													</div><!-- .info-content end -->
+												</li>
+												<li>
+													<i class="fas fa-phone-alt"></i>
+													<div class="info-content">
+														<span>110</span>
+													</div><!-- .info-content end -->
+												</li>
+												<li>
+													<i class="fas fa-envelope"></i>
+													<div class="info-content">
+														<span>sb@qq.com</span>
+													</div><!-- .info-content end -->
+												</li>
+											</ul><!-- .list-contact-info end -->
+										</div><!-- .col-md-3 end -->
+									</div><!-- .row end -->
+
+								</div><!-- .fb-row end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .footer-bar-wrap -->
+
+			</div><!-- #footer-bar-1 end -->
+
+			<div id="footer-bar-2" class="footer-bar">
+
+				<div class="footer-bar-wrap">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="fb-row">
+									<div class="copyrights-message">
+										<span>All right reserved to</span> <a href="#" target="_blank">27-614</a> <span>©2020</span>
+									</div><!-- .copyrights-message end -->
+
+								</div><!-- .fb-row end -->
+
+							</div><!-- .col-md-12 end -->
+						</div><!-- .row end -->
+					</div><!-- .container end -->
+
+				</div><!-- .footer-bar-wrap -->
+
+			</div><!-- #footer-bar-2 end -->
+
+		</footer><!-- #footer end -->
+
+		<div class="side-panel-menu">
+			<a class="logo logo-side-panel" href="index.html">
+				<img src="images/files/logo-header-alt.png" alt="">
+				<h3><span class="colored">IT Geeks</span></h3>
+				<span>Web Services</span>
+			</a><!-- .logo end -->
+			<div class="mobile-side-panel-menu">
+				<ul id="menu-mobile" class="menu-mobile">
+
+				</ul><!-- .mobile-menu-categories end -->
+			</div><!-- .mobile-side-panel-menu end -->
+			<div class="side-panel-close">
+				<div class="hamburger hamburger--slider is-active">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div><!-- .side-panel-close end -->
+		</div><!-- .side-panel-menu end -->
+
+	</div><!-- #full-container end -->
+
+	<a class="scroll-top-icon scroll-top" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+
+	<div class="popup-preview popup-preview-2 popup-preview-register">
+		<div class="popup-bg"></div>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+	
+					<div class="popup-content">
+						<div class="block-content">
+							<div class="popup-close hamburger hamburger--slider is-active">
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+							</div><!-- .popup-close -->
+							<div class="block-title">
+								<h3 align="center">免费注册账号</h3>
+								<h5 align="center">请输入相关信息进行注册</h5>
+							</div><!-- .block-title end -->
+							<div class="content" style="margin: 0 auto;">
+								<div >
+									<form id="form-register" class="rounded">
+										<div class="form-content">
+											<div class="form-group">
+												<label for="registerFullname"> 名称:</label>
+												<input type="text" name="jaName" id="registerFullname" class="form-control"
+													placeholder="">
+											</div><!-- .form-group end -->
+											<div class="form-group">
+												<label for="registerEmail"> 邮箱: </label>
+												<input type="text" name="registerEmail" id="registerEmail"
+													class="form-control" placeholder="">
+											</div><!-- .form-group end -->
+											<div class="form-group">
+												<div class="box-field">
+													<label for="registerPassword">密码:</label>
+													<input type="password" name="registerPassword" id="registerPassword"
+														class="form-control" placeholder="">
+												</div><!-- .box-field end -->
+												<div class="box-field">
+													<label for="registerPasswordConfirm">确认密码:</label>
+													<input type="password" name="registerPasswordConfirm"
+														id="registerPasswordConfirm" class="form-control" placeholder="">
+												</div><!-- .box-field end -->
+											</div><!-- .form-group end -->
+											<div class="form-group">
+												
+												<label class="label-container checkbox-default">
+													<span>点击遵守飞机订票系统的<a>协议</a></span>
+													<input type="checkbox">
+													<span class="checkmark"></span>
+												</label>
+												<input type="submit" class="form-control rounded" value="注   册">
+											</div><!-- .form-group end -->
+										</div><!-- .form-content end -->
+									</form><!-- #form-register end -->
+								</div><!-- .left end -->
+							</div><!-- .content end -->
+						</div><!-- .block-content end -->
+					</div><!-- .popup-content end -->
+	
+				</div><!-- .col-md-8 end -->
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</div><!-- .popup-preview -->
+
+	<div class="popup-preview popup-preview-2 popup-preview-login">
+		<div class="popup-bg"></div>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+	
+					<div class="popup-content">
+						<div class="block-content">
+							<div class="block-title">
+								<h3 align="center">欢迎使用飞机订票系统</h3>
+								<h5 align="center">请登录之后再继续使用</h5>
+							</div><!-- .block-title end -->
+							<div class="content">
+								<div  style="margin:0 auto;">
+									<form id="form-login" class="rounded">
+										<div class="form-content">
+											<div class="form-group">
+												<label for="loginUserEmail">用户名</label>
+												<input type="text" name="jaName" id="loginUserEmail" class="form-control"
+													placeholder="">
+											</div><!-- .form-group end -->
+											<div class="form-group">
+												<label for="loginPassword">密码</label>
+												<input type="password" name="loginPassword" id="loginPassword"
+													class="form-control" placeholder="">
+											</div><!-- .form-group end -->
+											<div class="form-group">
+												<input type="submit" class="form-control rounded" value="Login">
+												<label class="label-container checkbox-default">
+													<span>记住我</span>
+													<input type="checkbox">
+													<span class="checkmark"></span>
+												</label>
+												<a href="javascript:;">忘记密码?</a>
+											</div><!-- .form-group end -->
+										</div><!-- .form-content end -->
+									</form><!-- #form-login end -->
+								</div><!-- .left end -->
+								<div class="foot-msg">
+									<span class="msg">密码错误！</span>
+								</div><!-- .foot-msg end -->
+							</div><!-- .content end -->
+						</div><!-- .block-content end -->
+					</div><!-- .popup-content end -->
+	
+				</div><!-- .col-md-8 end -->
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</div><!-- .popup-preview -->
+
+	
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jRespond.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="scss/slick/slick.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/scrollIt.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/countrySelect.min.js"></script>
+	<script src='js/functions.js'></script>
+
+</body>
+</html>
