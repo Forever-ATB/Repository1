@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+
+    <title>飞机订票系统-后台管理</title>
+    <meta name="description" content="飞机订票系统-后台管理">
+    <meta name="keywords" content="飞机订票系统-后台管理">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+ 
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style2.css">
+	<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
+	<script src="../plugins/adminLTE/js/app.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/amazeui.cropper.css">
+    <link rel="stylesheet" href="../css/custom_up_img.css">
+    <script src="../js/jquery.min.js" charset="utf-8"></script>
+    <script src="../js/amazeui.min.js" charset="utf-8"></script>
+    <script src="../js/cropper.min.js" charset="utf-8"></script>
+    <script src="../js/custom_up_img.js" charset="utf-8"></script>
+    <style type="text/css">
+        .up-img-cover {width: 100px;height: 100px;}
+        .up-img-cover img{width: 100%;}
+    </style>
+
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+
+    <div class="wrapper">
+
+        <!-- 页面头部 -->
+        <header class="main-header">
+
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">
+					<b>飞机订票系统</b>-后台管理
+				</span>
+
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+				</a>
+            </nav>
+        </header>
+        <!-- 页面头部 /-->
+
+        <!-- 导航侧栏 -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel" style="height: 120px;">
+                    <div class="pull-left image">
+                        <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>姓名：叶宗海</p>
+                		<p>状态：<a href="#"><i class="fa fa-circle text-success"></i> 在线</a></p>
+						<p>职位：<a href="#">管理员</a></p>
+						<p>设置：<a href="#"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></a></p>
+                    </div>
+                </div>
+             
+
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="header">菜单</li>
+                    <li id="admin-index"><a href="index.html"><i class="fa fa-home fa-fw"></i> <span>首页</span></a></li>
+                    <!-- 菜单 -->
+                    <li class="treeview">
+                        <a href="#">
+							<i class="fa fa-users"></i> <span>用户管理</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+							</span>
+						</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="user-list.html"><i class="fa fa-circle-o"></i>用户列表</a>
+                            </li>
+
+                            <li >
+                                <a href="user-add.html"><i class="fa fa-circle-o"></i> 用户添加</a>
+                            </li>
+
+                            <li >
+                                <a href="admin-list.html"><i class="fa fa-circle-o"></i> 管理员列表</a>
+                            </li>
+
+                            <li >
+                                <a href="admin-add.html"><i class="fa fa-circle-o"></i> 添加管理员</a>
+							</li>
+							<li >
+                                <a href="user-operation-log.html.html"><i class="fa fa-circle-o"></i>用户在线人数统计</a>
+							</li>
+							<li >
+                                <a href="user-statistic.html"><i class="fa fa-circle-o"></i> 用户操作日志</a>
+							</li>
+							
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="treeview">
+                        <a href="#">
+							<i class="fa fa-pie-chart"></i> <span>航班管理</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+							</span>
+						</a>
+                        <ul class="treeview-menu">
+                            <li id="charts-flot">
+                                <a href="all-charts-flot.html"><i class="fa fa-circle-o"></i> 航班信息管理</a>
+                            </li>
+
+                            <li id="charts-inline">
+                                <a href="all-charts-inline.html"><i class="fa fa-circle-o"></i> 航班地点管理</a>
+                            </li>
+							
+							<li id="charts-inline1">
+							    <a href="all-charts-inline.html"><i class="fa fa-circle-o"></i> 座位信息管理</a>
+							</li>
+                        </ul>
+                    </li>
+					
+					
+					
+					
+					<li class="treeview">
+					    <a href="#">
+							<i class="fa fa-pie-chart"></i> <span>订单管理</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+							</span>
+						</a>
+					    <ul class="treeview-menu">
+					        <li id="charts-flot3">
+					            <a href="all-charts-flot.html"><i class="fa fa-circle-o"></i>订单查询</a>
+					        </li>
+					
+					        <li id="charts-inline3">
+					            <a href="all-charts-inline.html"><i class="fa fa-circle-o"></i> 订单添加</a>
+					        </li>
+							
+							<li id="charts-inline31">
+							    <a href="all-charts-inline.html"><i class="fa fa-circle-o"></i> 订单修改</a>
+							</li>
+							
+							<li id="charts-inline32">
+							    <a href="all-charts-inline.html"><i class="fa fa-circle-o"></i> 订单删除</a>
+							</li>
+					    </ul>
+					</li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- 导航侧栏 /-->
+
+
+
+		<!-- 内容区域 -->
+		<div class="container-fluid  content-wrapper">
+						<ol class="breadcrumb">
+						  <li><a href="#">首页</a></li>
+						  <li class="active">新增用户</li>
+						</ol>
+					<div class="panel panel-default">
+		              <div class="panel-heading">用户数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
+					  <div class="panel-body">
+						<form role="form">
+                           
+                            
+                            <div class="up-img-cover"  id="up-img-touch" >
+                                <img  class="am-circle" style="cursor: pointer;"  alt="点击图片上传" src="../img/avtar.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}" >
+                            
+                            </div>
+                            <div><a style="text-align: center; display: block;"  id="pic"></a></div>
+
+
+						  <div class="form-group">
+							<label>用户名</label>
+							<input type="text" class="form-control" placeholder="请输入用户名称">
+                          </div>
+                          
+                          <div class="form-group">
+							<label for="exampleInputPassword1">密码</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入密码">
+                          </div>
+                          
+						  <div class="form-group">
+							<label>邮箱地址</label>
+							<input type="email" class="form-control" placeholder="请输入邮箱地址">
+                          </div>
+
+                          <div class="form-group">
+							<label>性别: </label>&nbsp;&nbsp;&nbsp;
+                            <label><input style="width: 15px;height: 15px;" class="form-check-input" type="radio" name="gender">&nbsp;男</label>&nbsp;&nbsp;&nbsp;
+                            <label><input style="width: 15px;height: 15px;" class="form-check-input" type="radio" name="gender">&nbsp;女</label>&nbsp;&nbsp;&nbsp;
+                            <label><input style="width: 15px;height: 15px;" class="form-check-input" type="radio" name="gender">&nbsp;其他</label>
+                          </div>
+
+                          <div class="form-group">
+							<label>姓名</label>
+							<input type="text" class="form-control" placeholder="请输入你的真实姓名">
+                          </div>
+                          <div class="form-group">
+							<label>身份证号码</label>
+							<input type="text" class="form-control" placeholder="请输入身份证号">
+                          </div>
+                          
+						  <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 添 加</button>
+						  <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重 置</button>
+						</form>
+					  </div>
+					</div>
+		        </div>
+        <!-- 内容区域 -->
+        
+
+
+
+
+
+        <!--图片上传框-->
+    	<div class="am-modal am-modal-no-btn up-frame-bj " tabindex="-1" id="doc-modal-1">
+            <div class="am-modal-dialog up-frame-parent up-frame-radius">
+              <div class="am-modal-hd up-frame-header">
+                 <label>修改头像</label>
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+              </div>
+              <div class="am-modal-bd  up-frame-body">
+                <div class="am-g am-fl">
+                    <div class="am-form-group am-form-file">
+                    <div class="am-fl">
+                      <button type="button" class="am-btn am-btn-default am-btn-sm">
+                        <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+                    </div>
+                    <input type="file" id="inputImage">
+                     </div>
+                </div>
+                <div class="am-g am-fl" >
+                    <div class="up-pre-before up-frame-radius">
+                        <img alt="" src="" id="image" >
+                    </div>
+                    <div class="up-pre-after up-frame-radius">
+                    </div>
+                </div>
+                <div class="am-g am-fl">
+                     <div class="up-control-btns">
+                      <span class="am-icon-rotate-left"  onclick="rotateimgleft()"></span>
+                      <span class="am-icon-rotate-right" onClick="rotateimgright()"></span>
+                      <span class="am-icon-check" id="up-btn-ok" url="/admin/user/upload.action"></span>
+                     </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <!--加载框-->
+          <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+            <div class="am-modal-dialog">
+              <div class="am-modal-hd">正在上传...</div>
+              <div class="am-modal-bd">
+                <span class="am-icon-spinner am-icon-spin"></span>
+              </div>
+            </div>
+          </div>
+          
+          <!--警告框-->
+          <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+            <div class="am-modal-dialog">
+              <div class="am-modal-hd">信息</div>
+              <div class="am-modal-bd"  id="alert_content">
+                        成功了
+              </div>
+              <div class="am-modal-footer">
+                <span class="am-modal-btn">确定</span>
+              </div>
+            </div>
+          </div>
+
+        <!-- 底部导航 -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.8
+            </div>
+        </footer>
+        <!-- 底部导航 /-->
+    </div>
+
+
+    <script>
+        new Vue({
+          el: '#app',
+          data: {
+            message: 'Runoob',
+            message2: '菜鸟教程\r\nhttp://www.runoob.com'
+          }
+        })
+
+
+
+
+    </script>
+
+    
+
+
+</body>
+
+</html>
+<!---->

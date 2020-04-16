@@ -10,18 +10,16 @@
     <meta name="keywords" content="飞机订票系统-后台管理">
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
  
-
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="../css/style2.css">
-    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
-    <script src="../plugins/adminLTE/js/app.min.js"></script>
+	<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
+	<script src="../plugins/adminLTE/js/app.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -33,53 +31,20 @@
 
 
             <!-- Logo -->
-            <a href="all-admin-index.html" class="logo">
+            <a href="index.html" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>数据</b></span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>数据</b>后台管理</span>
+                <span class="logo-lg">
+					<b>飞机订票系统</b>-后台管理
+				</span>
+
             </a>
-
-
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
                 <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
 					<span class="sr-only">Toggle navigation</span>
 				</a>
-
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="../img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">张猿猿</span></a>
-                            <ul class="dropdown-menu">
-                                <!-- User image -->
-                                <li class="user-header">
-                                    <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                    <p>
-                                        张猿猿 - 数据管理员
-                                    </p>
-                                </li>
-
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">修改密码</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">注销</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
             </nav>
         </header>
         <!-- 页面头部 /-->
@@ -89,15 +54,15 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 <!-- Sidebar user panel -->
-                <div class="user-panel" style="height: 100px;">
+                <div class="user-panel" style="height: 120px;">
                     <div class="pull-left image">
                         <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>姓名：徐雨轩</p>
-						<p>状态：<a href="#"><i class="fa fa-circle text-success"></i> 在线</a></p>
-                        
+                        <p>姓名：叶宗海</p>
+                		<p>状态：<a href="#"><i class="fa fa-circle text-success"></i> 在线</a></p>
 						<p>职位：<a href="#"></i>管理员</a></p>
+						<p>设置：<a href="#"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></a></p>
                     </div>
                 </div>
              
@@ -106,31 +71,39 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
                     <li class="header">菜单</li>
-                    <li id="admin-index"><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
+                    <li id="admin-index"><a href="index.html"><i class="fa fa-home fa-fw"></i> <span>首页</span></a></li>
                     <!-- 菜单 -->
                     <li class="treeview">
                         <a href="#">
-							<i class="fa fa-folder"></i> <span>用户管理</span>
+							<i class="fa fa-users"></i> <span>用户管理</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
                         <ul class="treeview-menu">
-                            <li id="admin-login">
-                                <a href="all-admin-login.html"><i class="fa fa-circle-o"></i> 用户查询</a>
+                            <li>
+                                <a href="user-list.html"><i class="fa fa-circle-o"></i>用户列表</a>
                             </li>
 
-                            <li id="admin-register">
-                                <a href="all-admin-register.html"><i class="fa fa-circle-o"></i> 用户添加</a>
+                            <li >
+                                <a href="user-add.html"><i class="fa fa-circle-o"></i> 用户添加</a>
                             </li>
 
-                            <li id="admin-404">
-                                <a href="all-admin-404.html"><i class="fa fa-circle-o"></i> 用户修改</a>
+                            <li >
+                                <a href="admin-list.html"><i class="fa fa-circle-o"></i> 管理员列表</a>
                             </li>
 
-                            <li id="admin-500">
-                                <a href="all-admin-500.html"><i class="fa fa-circle-o"></i> 用户删除</a>
-                            </li>
+                            <li >
+                                <a href="admin-add.html"><i class="fa fa-circle-o"></i> 添加管理员</a>
+							</li>
+							<li >
+                                <a href="user-operation-log.html.html"><i class="fa fa-circle-o"></i>用户在线人数统计</a>
+							</li>
+							<li >
+                                <a href="user-statistic.html"><i class="fa fa-circle-o"></i> 用户操作日志</a>
+							</li>
+							
+
                         </ul>
                     </li>
 
@@ -195,34 +168,70 @@
 
 		<!-- 内容区域 -->
 		<div class="container-fluid  content-wrapper">
-						<ol class="breadcrumb">
-						  <li><a href="#">首页</a></li>
-						  <li><a href="#">数据列表</a></li>
-						  <li class="active">新增</li>
-						</ol>
-					<div class="panel panel-default">
-		              <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
-					  <div class="panel-body">
-						<form role="form">
-						  <div class="form-group">
-							<label for="exampleInputPassword1">登陆账号</label>
-							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入登陆账号">
-						  </div>
-						  <div class="form-group">
-							<label for="exampleInputPassword1">用户名称</label>
-							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入用户名称">
-						  </div>
-						  <div class="form-group">
-							<label for="exampleInputEmail1">邮箱地址</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入邮箱地址">
-							<p class="help-block label label-warning">请输入合法的邮箱地址, 格式为： xxxx@xxxx.com</p>
-						  </div>
-						  <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
-						  <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
-						</form>
-					  </div>
-					</div>
-		        </div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+				</div>
+			<div class="panel-body">
+				<form class="form-inline" role="form" style="float:left;">
+		  <div class="form-group has-feedback">
+		    <div class="input-group">
+		      <div class="input-group-addon">查询条件</div>
+		      <input class="form-control has-success" type="text" placeholder="请输入查询条件">
+		    </div>
+		  </div>
+		  <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询</button>
+		</form>
+				<button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
+				<button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='add.html'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
+				<br>
+				<hr style="clear:both;">
+		          <div class="table-responsive">
+		            <table class="table  table-bordered">
+		              <thead>
+		                <tr >
+		                  <th width="30">#</th>
+						  <th width="30"><input type="checkbox"></th>
+		                  <th>账号</th>
+		                  <th>名称</th>
+		                  <th>邮箱地址</th>
+		                  <th width="100">操作</th>
+		                </tr>
+		              </thead>
+		              <tbody>
+		                <tr>
+		                  <td>1</td>
+						  <td><input type="checkbox"></td>
+		                  <td>Lorem</td>
+		                  <td>ipsum</td>
+		                  <td>dolor</td>
+		                  <td>
+						      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>
+						      <button type="button" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>
+							  <button type="button" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>
+						  </td>
+		                </tr>
+		              </tbody>
+		              <tfoot>
+		              	<tr >
+							<td colspan="6" align="center">
+		              			<ul class="pagination">
+		              				<li class="disabled"><a href="#">上一页</a></li>
+		              				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		              				<li><a href="#">2</a></li>
+		              				<li><a href="#">3</a></li>
+		              				<li><a href="#">4</a></li>
+		              				<li><a href="#">5</a></li>
+		              				<li><a href="#">下一页</a></li>
+		              			</ul>
+		              		</td>
+		              	</tr>
+					  </tfoot>
+		            </table>
+				  </div>
+			</div>
+			</div>
+		</div>
 		<!-- 内容区域 -->
 
         <!-- 底部导航 -->
@@ -230,11 +239,13 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0.8
             </div>
-            <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
         </footer>
         <!-- 底部导航 /-->
 
     </div>
+
+
+    
 </body>
 
 </html>
